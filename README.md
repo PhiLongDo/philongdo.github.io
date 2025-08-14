@@ -1,6 +1,6 @@
-# phi_long_do
+# philongdo.github.io
 
-Một project cho trang web cá nhân của tôi.
+A project for my personal website.
 
 ### Website
-https://philongdo.github.io/PhiLongDo
+https://philongdo.github.io
