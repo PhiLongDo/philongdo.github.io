@@ -7,6 +7,9 @@ const githubUrl = 'https://github.com/PhiLongDo';
 const playStoreUrl = 'https://play.google.com/store/apps/details';
 const appStoreUrl = 'https://apps.apple.com/us/app';
 
+const webKeywords =
+    'Flutter, Dart, Phi Long, Do Phi Long, PhiLong, DoPhiLong, PhiLongDo';
+
 final appList = [
   AppModel(
     name: 'Ninja and Fruits',
