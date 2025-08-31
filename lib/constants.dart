@@ -1,5 +1,7 @@
 import 'package:phi_long_do/models/app_model.dart';
 
+import 'generated/assets.dart';
+
 const developerName = 'Hirokito';
 const myName = 'Đỗ Phi Long';
 const emailContact = 'longdo805@gmaill.com';
@@ -13,17 +15,20 @@ const webKeywords =
 final appList = [
   AppModel(
     name: 'Ninja and Fruits',
-    appIconAsset: 'assets/ic_tap_tap.png',
+    appIconAssetWebp: Assets.webpIcTapTap128,
+    appIconAssetPng: Assets.pngIcTapTap128,
     playStoreId: 'com.dplong.fruits_and_ninja',
   ),
   AppModel(
     name: 'Ghi điểm trò chơi',
-    appIconAsset: 'assets/ic_poker_point.png',
+    appIconAssetWebp: Assets.webpIcPokerPoint128,
+    appIconAssetPng: Assets.pngIcPokerPoint128,
     playStoreId: 'com.dplong.advance.pokerpoint',
   ),
   AppModel(
     name: 'Trò chơi lật hình',
-    appIconAsset: 'assets/ic_flip_game.png',
+    appIconAssetWebp: Assets.webpIcFlipGame128,
+    appIconAssetPng: Assets.pngIcFlipGame128,
     playStoreId: 'com.dplong.flipgame.neo',
   ),
 ];

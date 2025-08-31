@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:phi_long_do/components/image_asset.dart';
 
 import 'components/apps_participant.dart';
 import 'components/personal_info_participant.dart';
 import 'constants.dart';
+import 'generated/assets.dart';
 
 void main() {
   runApp(const MyApp());
@@ -48,7 +50,12 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget _buildHeader() {
     return Column(
       children: [
-        Image.asset('assets/ic_developer.png', width: 48, height: 48),
+        ImageAsset(
+          webpAsset: Assets.webpIcDeveloper128,
+          pngAsset: Assets.pngIcDeveloper128,
+          width: 48,
+          height: 48,
+        ),
         Text(
           developerName,
           style: TextStyle(
