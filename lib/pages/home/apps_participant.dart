@@ -1,12 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:phi_long_do/components/image_asset.dart';
-import 'package:phi_long_do/constants.dart';
-import 'package:phi_long_do/models/app_model.dart';
-import 'package:url_launcher/url_launcher.dart';
-
-import 'store_button.dart';
-import 'text_app_name.dart';
-import 'text_title.dart';
+part of 'home_page.dart';
 
 class AppsParticipant extends StatelessWidget {
   const AppsParticipant({super.key});
