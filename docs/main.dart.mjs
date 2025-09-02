@@ -447,6 +447,7 @@ class CompiledApp {
       _1320: s => JSON.stringify(s),
       _1321: s => printToConsole(s),
       _1322: (o, p, r) => o.replaceAll(p, () => r),
+      _1323: (o, p, r) => o.replace(p, () => r),
       _1324: Function.prototype.call.bind(String.prototype.toLowerCase),
       _1325: s => s.toUpperCase(),
       _1326: s => s.trim(),
@@ -458,6 +459,7 @@ class CompiledApp {
       _1332: (string, token) => string.split(token),
       _1333: Object.is,
       _1334: o => o instanceof Array,
+      _1335: (a, i) => a.push(i),
       _1339: a => a.pop(),
       _1340: (a, i) => a.splice(i, 1),
       _1341: (a, s) => a.join(s),
@@ -525,8 +527,12 @@ class CompiledApp {
       _1414: (ms, c) =>
       setTimeout(() => dartInstance.exports.$invokeCallback(c),ms),
       _1415: (handle) => clearTimeout(handle),
+      _1416: (ms, c) =>
+      setInterval(() => dartInstance.exports.$invokeCallback(c), ms),
+      _1417: (handle) => clearInterval(handle),
       _1418: (c) =>
       queueMicrotask(() => dartInstance.exports.$invokeCallback(c)),
+      _1419: () => Date.now(),
       _1424: o => Object.keys(o),
       _1451: (s, m) => {
         try {
@@ -561,6 +567,7 @@ class CompiledApp {
             constructor, [null, ...args]);
         return new factoryFunction();
       },
+      _1476: (o, p) => p in o,
       _1477: (o, p) => o[p],
       _1478: (o, p, v) => o[p] = v,
       _1479: (o, m, a) => o[m].apply(o, a),
@@ -653,6 +660,7 @@ class CompiledApp {
         return s;
       },
       _1501: x0 => x0.index,
+      _1502: x0 => x0.groups,
       _1503: x0 => x0.flags,
       _1504: x0 => x0.multiline,
       _1505: x0 => x0.ignoreCase,
