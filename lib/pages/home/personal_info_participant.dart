@@ -1,11 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
-import 'package:url_launcher/url_launcher.dart';
-
-import '../constants.dart';
-import 'text_body.dart';
-import 'text_link.dart';
-import 'text_title.dart';
+part of 'home_page.dart';
 
 class PersonalInfoParticipant extends StatelessWidget {
   const PersonalInfoParticipant({super.key});
