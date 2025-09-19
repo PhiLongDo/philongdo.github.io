@@ -80500,8 +80500,8 @@ s=j.f
 B.b.S(s)
 r=j.r
 B.b.S(r)
-j.e=j.d=2
-j.Q=4
+j.e=j.d=10
+j.Q=100
 for(q=t.s,p=t.HZ,o=1;o<=j.e;++o){n=j.d
 m=A.c(new Array(n),p)
 for(l=0;l<n;++l)m[l]=!1
@@ -80631,12 +80631,12 @@ A.r4.prototype={
 aw(){return new A.In()}}
 A.In.prototype={
 v7(){var s,r=this.a,q=r.r,p=r.w
-if(p<q)s=q-p>=240?p/2:(p-(240-q+p))/2
-else s=p-q>=60?q/2:(q-(60-p+q))/2
+if(p<q)s=q-p>=240?p/10:(p-(240-q+p))/10
+else s=p-q>=60?q/10:(q-(60-p+q))/10
 return s},
 L(a){var s=this,r=null,q=s.v7(),p=s.v7(),o=s.a,n=o.e,m=o.d,l=s.v7(),k=s.v7(),j=A.iv(3),i=A.auV(B.l,1),h=o.f,g=h?B.YH:B.YF
 o=h?o.c:"\u2724"
-return A.eS(A.aKp(A.iJ(r,A.df(r,A.f8(A.bM(o,r,r,A.d1(r,r,h?B.YJ:B.eU,r,r,r,r,r,"NotoColorEmoji",r,r,100,r,r,r,r,r,!0,r,r,r,r,r,r,r,r),B.iK),r,r),B.w,r,r,new A.cy(g,r,i,j,r,r,B.ap),k,r,r,l),B.a4,!1,r,r,r,r,r,r,r,r,r,r,r,r,m,r,r,r),!1,!1,!1,n),p,q)}}
+return A.eS(A.aKp(A.iJ(r,A.df(r,A.f8(A.bM(o,r,r,A.d1(r,r,h?B.YJ:B.eU,r,r,r,r,r,"NotoColorEmoji",r,r,20,r,r,r,r,r,!0,r,r,r,r,r,r,r,r),B.iK),r,r),B.w,r,r,new A.cy(g,r,i,j,r,r,B.ap),k,r,r,l),B.a4,!1,r,r,r,r,r,r,r,r,r,r,r,r,m,r,r,r),!1,!1,!1,n),p,q)}}
 A.tw.prototype={
 L(a){var s=null,r=this.c,q=B.h.fl(r,60),p=B.c.cM("0"+q,B.h.k(q).length-1),o=B.h.bj(r,60)
 return A.dB(A.c([new A.co(B.bD,A.bM(p+":"+B.c.cM("0"+o,B.h.k(o).length-1),s,s,A.d1(s,s,B.o,s,s,s,s,s,s,s,s,16,s,s,B.cj,s,s,!0,s,s,s,s,s,s,s,s),s),s)],t.p),B.M,B.cu,B.a1,0)}}

@@ -58,7 +58,7 @@ const listValue = [
   '🍦',
   '🥧',
 ];
-const gamePlayHeight = 2;
-const gamePlayWidth = 2;
+const gamePlayHeight = 10;
+const gamePlayWidth = 10;
 
 const timeDelay = Duration(milliseconds: 400);
