@@ -189,7 +189,9 @@ class FlipGamePlayMainScreenState extends State<FlipGamePlayMainScreen> {
                       SizedBox(height: 16),
                       ElevatedButton(
                         onPressed: () {
-                          _initGame();
+                          setState(() {
+                            _initGame();
+                          });
                         },
                         child: Text('Play Again'),
                       ),
