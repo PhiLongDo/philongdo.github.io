@@ -5,6 +5,7 @@ class AppModel {
     required this.appIconAssetPng,
     this.playStoreId,
     this.appStoreId,
+    this.webDemoPath,
   });
 
   final String name;
@@ -12,4 +13,5 @@ class AppModel {
   final String appIconAssetPng;
   final String? playStoreId;
   final String? appStoreId;
+  final String? webDemoPath;
 }

@@ -30,5 +30,6 @@ final appList = [
     appIconAssetWebp: Assets.webpIcFlipGame128,
     appIconAssetPng: Assets.pngIcFlipGame128,
     playStoreId: 'com.dplong.flipgame.neo',
+    webDemoPath: 'flip_game',
   ),
 ];
