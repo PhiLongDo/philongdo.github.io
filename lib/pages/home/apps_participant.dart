@@ -10,12 +10,12 @@ class AppsParticipant extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         TextTitle(text: 'Apps'),
-        ...appList.map((app) => _buildItem(app)),
+        ...appList.map((app) => _buildItem(app, context)),
       ],
     );
   }
 
-  Widget _buildItem(AppModel app) {
+  Widget _buildItem(AppModel app, BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(bottom: 16.0),
       child: Row(
@@ -52,6 +52,12 @@ class AppsParticipant extends StatelessWidget {
                       Uri.parse('$appStoreUrl/${app.appStoreId}'),
                       webOnlyWindowName: '_blank',
                     );
+                  },
+                ),
+              if (app.webDemoPath != null)
+                PlayOnWebButton(
+                  onTap: () {
+                    context.go('/${app.webDemoPath}');
                   },
                 ),
             ],

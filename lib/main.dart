@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
         Locale('vi', 'VN'), // Hebrew
       ],
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
       ),
       routerConfig: MyRouterConfig.router,
     );

@@ -2,6 +2,8 @@
 class Assets {
   Assets._();
 
+  static const String fontsNotoColorEmojiRegular =
+      'assets/fonts/NotoColorEmoji-Regular.ttf';
   static const String pngIcDeveloper128 = 'assets/png/ic_developer_128.png';
   static const String pngIcFlipGame128 = 'assets/png/ic_flip_game_128.png';
   static const String pngIcPokerPoint128 = 'assets/png/ic_poker_point_128.png';
