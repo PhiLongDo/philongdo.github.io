@@ -3,13 +3,6 @@ import 'package:flutter/material.dart';
 import 'commons.dart';
 
 class ItemGame extends StatefulWidget {
-  final String text;
-  final VoidCallback onTap;
-  final bool visible, isOpen;
-
-  final double width;
-  final double height;
-
   const ItemGame({
     super.key,
     required this.onTap,
@@ -19,6 +12,12 @@ class ItemGame extends StatefulWidget {
     required this.width,
     required this.height,
   });
+  final String text;
+  final VoidCallback onTap;
+  final bool visible, isOpen;
+
+  final double width;
+  final double height;
 
   @override
   ItemGameState createState() => ItemGameState();
@@ -66,12 +65,12 @@ class ItemGameState extends State<ItemGame> {
             ),
             child: Center(
               child: Text(
-                widget.isOpen ? widget.text : "✤",
+                widget.isOpen ? widget.text : '✤',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   color: widget.isOpen ? Colors.brown : Colors.blue,
                   fontSize: (200 / gamePlayHeight),
-                  fontFamily: "NotoColorEmoji",
+                  fontFamily: 'NotoColorEmoji',
                 ),
               ),
             ),

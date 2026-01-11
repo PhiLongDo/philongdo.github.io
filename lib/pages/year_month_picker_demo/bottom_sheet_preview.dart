@@ -38,7 +38,7 @@ class BottomSheetPreview extends StatelessWidget {
               firstYear: 2000,
               initialYearMonth: initYearMonth,
               backgroundColor: Colors.white,
-              locale: const Locale("vi"),
+              locale: const Locale('vi'),
               monthItemBuilder: (context, month) {
                 return Container(
                   alignment: Alignment.center,

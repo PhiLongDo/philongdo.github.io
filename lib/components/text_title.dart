@@ -9,7 +9,7 @@ class TextTitle extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       text,
-      style: TextStyle(
+      style: const TextStyle(
         fontSize: 32,
         color: Colors.green,
         fontWeight: FontWeight.w600,

@@ -15,10 +15,7 @@ dependencies:
   intl: ^0.20.2
   url_launcher: ^6.3.2
   go_router: ^16.2.1
-  year_month_picker:
-    git:
-      url: git@github.com:PhiLongDo/year_month_picker.git
-      ref: 1.0.2
+  year_month_picker: ^1.0.2
 
 dev_dependencies:
   flutter_test:
@@ -36,3 +33,6 @@ flutter:
     - family: NotoColorEmoji
       fonts:
         - asset: assets/fonts/NotoColorEmoji-Regular.ttf
+    - family: CustomIcons
+      fonts:
+        - asset: assets/fonts/custom-icon.ttf

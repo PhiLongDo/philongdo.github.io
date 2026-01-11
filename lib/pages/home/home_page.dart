@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:phi_long_do/components/play_on_web_button.dart';
+import 'package:phi_long_do/components/web_button.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../../components/image_asset.dart';
@@ -12,9 +12,11 @@ import '../../components/text_title.dart';
 import '../../constants.dart';
 import '../../generated/assets.dart';
 import '../../models/app_model.dart';
+import '../../models/package_model.dart';
 
 part 'apps_participant.dart';
 part 'personal_info_participant.dart';
+part 'packages_participant.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -39,7 +41,7 @@ class _HomePageState extends State<HomePage> {
   }
 
   Widget _buildHeader() {
-    return Column(
+    return const Column(
       children: [
         ImageAsset(
           webpAsset: Assets.webpIcDeveloper128,
@@ -60,22 +62,25 @@ class _HomePageState extends State<HomePage> {
   }
 
   Widget _buildBody(BuildContext context) {
-    if (MediaQuery.of(context).size.width <= 800) {
-      return Column(
+    if (MediaQuery.of(context).size.width <= 865) {
+      return const Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           PersonalInfoParticipant(),
-          SizedBox(height: 12),
+          Divider(height: 12),
           AppsParticipant(),
+          Divider(height: 12),
+          PackagesParticipant(),
         ],
       );
     }
 
-    return Row(
+    return const Row(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Expanded(flex: 4, child: PersonalInfoParticipant()),
-        Expanded(flex: 6, child: AppsParticipant()),
+        Expanded(flex: 5, child: AppsParticipant()),
+        Expanded(flex: 3, child: PackagesParticipant()),
       ],
     );
   }

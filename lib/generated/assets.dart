@@ -2,6 +2,7 @@
 class Assets {
   Assets._();
 
+  static const String fontsCustomIcon = 'assets/fonts/custom-icon.ttf';
   static const String fontsNotoColorEmojiRegular =
       'assets/fonts/NotoColorEmoji-Regular.ttf';
   static const String pngIcDeveloper128 = 'assets/png/ic_developer_128.png';

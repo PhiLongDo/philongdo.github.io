@@ -44,10 +44,10 @@ class DialogPreview extends StatelessWidget {
                   style: TextStyle(color: Colors.deepOrange),
                 );
               },
-              locale: const Locale("vi"),
+              locale: const Locale('vi'),
               yearMonthTextBuilder: (context, year, month) {
                 return Text(
-                  DateFormat.yMMMM("vi").format(DateTime(year, month)),
+                  DateFormat.yMMMM('vi').format(DateTime(year, month)),
                   style: const TextStyle(
                     color: Colors.red,
                     fontSize: 20,
@@ -59,7 +59,7 @@ class DialogPreview extends StatelessWidget {
                 return Container(
                   alignment: Alignment.center,
                   child: Text(
-                    DateFormat.MMMM("vi").format(DateTime(2025, month)),
+                    DateFormat.MMMM('vi').format(DateTime(2025, month)),
                     style: const TextStyle(
                       color: Colors.deepPurple,
                       fontSize: 18,

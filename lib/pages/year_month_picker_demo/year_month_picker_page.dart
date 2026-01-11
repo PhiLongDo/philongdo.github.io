@@ -19,7 +19,7 @@ class _YearMonthPickerPageState extends State<YearMonthPickerPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Year Month Picker Demo')),
+      appBar: AppBar(title: const Text('Year Month Picker Demo')),
       body: Center(
         child: Column(
           mainAxisSize: MainAxisSize.min,

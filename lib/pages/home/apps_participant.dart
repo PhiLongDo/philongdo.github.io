@@ -9,7 +9,7 @@ class AppsParticipant extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        TextTitle(text: 'Apps'),
+        const TextTitle(text: 'Apps'),
         ...appList.map((app) => _buildItem(app, context)),
       ],
     );
@@ -26,16 +26,16 @@ class AppsParticipant extends StatelessWidget {
             width: 128,
             height: 128,
           ),
-          SizedBox(width: 16.0),
+          const SizedBox(width: 16.0),
           Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
+            spacing: 4,
             children: [
               TextAppName(text: app.name),
               if (app.playStoreId != null)
                 StoreButton(
-                  smallText: 'Get it on',
-                  storeName: 'Google play',
+                  storeType: StoreType.googlePlay,
                   onTap: () {
                     launchUrl(
                       Uri.parse('$playStoreUrl?id=${app.playStoreId}'),
@@ -45,8 +45,7 @@ class AppsParticipant extends StatelessWidget {
                 ),
               if (app.appStoreId != null)
                 StoreButton(
-                  smallText: 'Download on the',
-                  storeName: 'Apple Store',
+                  storeType: StoreType.appleStore,
                   onTap: () {
                     launchUrl(
                       Uri.parse('$appStoreUrl/${app.appStoreId}'),
@@ -54,8 +53,16 @@ class AppsParticipant extends StatelessWidget {
                     );
                   },
                 ),
+              if (app.windowsStore != null)
+                StoreButton(
+                  storeType: StoreType.windowsStore,
+                  onTap: () {
+                    // TODO: launch windows store or download exe file
+                  },
+                ),
               if (app.webDemoPath != null)
-                PlayOnWebButton(
+                WebButton(
+                  webType: WebType.playOnWeb,
                   onTap: () {
                     context.go('/${app.webDemoPath}');
                   },

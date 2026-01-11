@@ -7,6 +7,6 @@ class TextBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(text, style: TextStyle(fontSize: 18, color: Colors.grey));
+    return Text(text, style: const TextStyle(fontSize: 18, color: Colors.grey));
   }
 }
