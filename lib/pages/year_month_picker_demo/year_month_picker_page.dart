@@ -3,8 +3,8 @@ import 'package:intl/intl.dart';
 import 'package:year_month_picker/year_month_picker.dart';
 
 part 'bottom_sheet_preview.dart';
-
 part 'dialog_preview.dart';
+part 'date_spinner_preview.dart';
 
 class YearMonthPickerPage extends StatefulWidget {
   const YearMonthPickerPage({super.key});
@@ -21,30 +21,40 @@ class _YearMonthPickerPageState extends State<YearMonthPickerPage> {
     return Scaffold(
       appBar: AppBar(title: const Text('Year Month Picker Demo')),
       body: Center(
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          spacing: 24,
-          children: [
-            yearMonthSelected != null
-                ? Text(DateFormat.yMMMM().format(yearMonthSelected!))
-                : const Text('No data'),
-            BottomSheetPreview(
-              initYearMonth: yearMonthSelected,
-              onYearMonthSelected: (dateTime) {
-                setState(() {
-                  yearMonthSelected = dateTime;
-                });
-              },
-            ),
-            DialogPreview(
-              initYearMonth: yearMonthSelected,
-              onYearMonthSelected: (dateTime) {
-                setState(() {
-                  yearMonthSelected = dateTime;
-                });
-              },
-            ),
-          ],
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            spacing: 24,
+            children: [
+              yearMonthSelected != null
+                  ? Text(DateFormat.yMMMM().format(yearMonthSelected!))
+                  : const Text('No data'),
+              BottomSheetPreview(
+                initYearMonth: yearMonthSelected,
+                onYearMonthSelected: (dateTime) {
+                  setState(() {
+                    yearMonthSelected = dateTime;
+                  });
+                },
+              ),
+              DialogPreview(
+                initYearMonth: yearMonthSelected,
+                onYearMonthSelected: (dateTime) {
+                  setState(() {
+                    yearMonthSelected = dateTime;
+                  });
+                },
+              ),
+              DateSpinnerPreview(
+                initDate: yearMonthSelected,
+                onDateSelected: (dateTime) {
+                  setState(() {
+                    yearMonthSelected = dateTime;
+                  });
+                },
+              ),
+            ],
+          ),
         ),
       ),
     );
