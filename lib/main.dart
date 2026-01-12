@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
       ],
       supportedLocales: const [
         Locale('en', 'US'), // English
-        Locale('vi', 'VN'), // Hebrew
+        Locale('vi', 'VN'), // Vietnamese
       ],
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),

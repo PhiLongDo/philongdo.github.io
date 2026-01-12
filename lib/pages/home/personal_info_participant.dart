@@ -9,18 +9,18 @@ class PersonalInfoParticipant extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        TextTitle(text: 'Thông tin liên hệ'),
+        const TextTitle(text: 'Thông tin liên hệ'),
         Row(
           children: [
             _leading(),
-            TextBody(text: 'Name: '),
-            TextBody(text: myName),
+            const TextBody(text: 'Name: '),
+            const TextBody(text: myName),
           ],
         ),
         Row(
           children: [
             _leading(),
-            TextBody(text: 'Email: '),
+            const TextBody(text: 'Email: '),
             TextLink(
               text: emailContact,
               onTap: () {
@@ -32,7 +32,7 @@ class PersonalInfoParticipant extends StatelessWidget {
         Row(
           children: [
             _leading(),
-            TextBody(text: 'Github: '),
+            const TextBody(text: 'Github: '),
             TextLink(
               text: 'PhiLongDo',
               onTap: () {
@@ -46,8 +46,8 @@ class PersonalInfoParticipant extends StatelessWidget {
   }
 
   Widget _leading() {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 8.0),
+    return const Padding(
+      padding: EdgeInsets.symmetric(horizontal: 8.0),
       child: Icon(Icons.ac_unit, color: Colors.grey, size: 16),
     );
   }

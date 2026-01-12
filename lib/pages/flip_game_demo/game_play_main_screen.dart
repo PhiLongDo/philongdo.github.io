@@ -18,7 +18,7 @@ class FlipGamePlayMainScreenState extends State<FlipGamePlayMainScreen> {
   late int _width, _height; // size of matrix game
   final List<List<bool>> _stateOpened = []; // state open of item in matrix game
   final List<List<bool>> _stateVisible = []; //state visible matrix game
-  String _valueA = "", _valueB = ""; // value of items game is opening
+  String _valueA = '', _valueB = ''; // value of items game is opening
   int _xPre = -1, _yPre = -1;
 
   late int _itemCountDown;
@@ -37,7 +37,7 @@ class FlipGamePlayMainScreenState extends State<FlipGamePlayMainScreen> {
   /// Create const of game
   void _initGame() {
     _ticks.value = 0;
-    _timer = Timer.periodic(Duration(seconds: 1), (timer) {
+    _timer = Timer.periodic(const Duration(seconds: 1), (timer) {
       _ticks.value++;
     });
 
@@ -49,7 +49,7 @@ class FlipGamePlayMainScreenState extends State<FlipGamePlayMainScreen> {
     for (int y = 1; y <= _height; y++) {
       _stateOpened.add(List.generate(_width, (index) => false));
       _stateVisible.add(List.generate(_width, (index) => true));
-      _valueGame.add(List.generate(_width, (index) => ""));
+      _valueGame.add(List.generate(_width, (index) => ''));
     }
     _crateListValueInGame();
   }
@@ -63,11 +63,11 @@ class FlipGamePlayMainScreenState extends State<FlipGamePlayMainScreen> {
 
     if (_yPre == y && _xPre == x) return; // Kiem tra viec nhan cung 1 item
     setState(() => _stateOpened[y][x] = true);
-    (_valueA == "")
+    (_valueA == '')
         ? _valueA = _valueGame[y][x]
         : _valueB = _valueGame[y][x]; // Luu lai value cua item vua mo
     // Kiem tra co mo 2 item khong
-    if (_valueB == "") {
+    if (_valueB == '') {
       _xPre = x;
       _yPre = y;
       return;
@@ -92,8 +92,8 @@ class FlipGamePlayMainScreenState extends State<FlipGamePlayMainScreen> {
       });
       _xPre = -1;
       _yPre = -1;
-      _valueA = "";
-      _valueB = "";
+      _valueA = '';
+      _valueB = '';
     });
   }
 
@@ -130,7 +130,7 @@ class FlipGamePlayMainScreenState extends State<FlipGamePlayMainScreen> {
 
   /// create random list text
   void _crateListValueInGame() {
-    _textGame = List.generate(_itemCountDown, (index) => "");
+    _textGame = List.generate(_itemCountDown, (index) => '');
     List<int> listIndex = List.generate(_itemCountDown, (index) => index);
     Random random;
     int index;
@@ -160,7 +160,7 @@ class FlipGamePlayMainScreenState extends State<FlipGamePlayMainScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Trò chơi lật hình'),
+        title: const Text('Trò chơi lật hình'),
         actions: [
           ValueListenableBuilder(
             valueListenable: _ticks,
@@ -178,7 +178,7 @@ class FlipGamePlayMainScreenState extends State<FlipGamePlayMainScreen> {
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      Text(
+                      const Text(
                         'YOU WIN!!!',
                         style: TextStyle(
                           color: Colors.blueAccent,
@@ -186,14 +186,14 @@ class FlipGamePlayMainScreenState extends State<FlipGamePlayMainScreen> {
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      SizedBox(height: 16),
+                      const SizedBox(height: 16),
                       ElevatedButton(
                         onPressed: () {
                           setState(() {
                             _initGame();
                           });
                         },
-                        child: Text('Play Again'),
+                        child: const Text('Play Again'),
                       ),
                     ],
                   ),

@@ -6,9 +6,9 @@ class TimeCounter extends StatelessWidget {
 
   /// Format MMSS
   String formatMMSS() {
-    String str = "";
+    String str = '';
     int minutes = ticks ~/ 60;
-    str = ("0$minutes").substring(minutes.toString().length - 1);
+    str = ('0$minutes').substring(minutes.toString().length - 1);
     int seconds = ticks % 60;
     str = "$str:${("0$seconds").substring(seconds.toString().length - 1)}";
     return str;
@@ -23,7 +23,7 @@ class TimeCounter extends StatelessWidget {
           padding: const EdgeInsets.all(8.0),
           child: Text(
             formatMMSS(),
-            style: TextStyle(
+            style: const TextStyle(
               color: Colors.black,
               fontSize: 16,
               fontWeight: FontWeight.bold,

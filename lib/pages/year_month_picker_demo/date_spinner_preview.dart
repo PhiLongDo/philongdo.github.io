@@ -1,14 +1,10 @@
 part of 'year_month_picker_page.dart';
 
-class BottomSheetPreview extends StatelessWidget {
-  const BottomSheetPreview({
-    this.onYearMonthSelected,
-    this.initYearMonth,
-    super.key,
-  });
+class DateSpinnerPreview extends StatelessWidget {
+  const DateSpinnerPreview({this.onDateSelected, this.initDate, super.key});
 
-  final DateTime? initYearMonth;
-  final void Function(DateTime dateTime)? onYearMonthSelected;
+  final DateTime? initDate;
+  final void Function(DateTime dateTime)? onDateSelected;
 
   @override
   Widget build(BuildContext context) {
@@ -18,27 +14,46 @@ class BottomSheetPreview extends StatelessWidget {
       children: [
         ElevatedButton(
           onPressed: () async {
-            final dateTime = await showYearMonthPickerBottomSheet(
+            final dateTime = await showDatePickerSpinner(
               context: context,
               lastYear: 3000,
               firstYear: 2000,
-              initialYearMonth: initYearMonth,
+              initialDate: initDate,
             );
             if (dateTime != null) {
-              onYearMonthSelected?.call(dateTime);
+              onDateSelected?.call(dateTime);
             }
           },
-          child: const Text('Show default bottom sheet'),
+          child: const Text('Show default date picker spinner'),
         ),
         ElevatedButton(
           onPressed: () async {
-            final dateTime = await showYearMonthPickerBottomSheet(
+            final dateTime = await showDatePickerSpinner(
               context: context,
               lastYear: 3000,
               firstYear: 2000,
-              initialYearMonth: initYearMonth,
+              initialDate: initDate,
               backgroundColor: Colors.white,
-              locale: const Locale('vi'),
+              locale: const Locale("vi"),
+              dayItemBuilder: (context, day) {
+                return Container(
+                  alignment: Alignment.center,
+                  margin: const EdgeInsets.symmetric(horizontal: 4.0),
+                  decoration: const BoxDecoration(
+                    border: Border(
+                      top: BorderSide(color: Colors.redAccent, width: 0.5),
+                    ),
+                  ),
+                  child: Text(
+                    '$day',
+                    style: const TextStyle(
+                      color: Colors.red,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 24,
+                    ),
+                  ),
+                );
+              },
               monthItemBuilder: (context, month) {
                 return Container(
                   alignment: Alignment.center,
@@ -117,10 +132,10 @@ class BottomSheetPreview extends StatelessWidget {
               },
             );
             if (dateTime != null) {
-              onYearMonthSelected?.call(dateTime);
+              onDateSelected?.call(dateTime);
             }
           },
-          child: const Text('Show custom bottom sheet'),
+          child: const Text('Show custom date picker spinner'),
         ),
       ],
     );
