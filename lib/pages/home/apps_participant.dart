@@ -20,11 +20,13 @@ class AppsParticipant extends StatelessWidget {
       padding: const EdgeInsets.only(bottom: 16.0),
       child: Row(
         children: [
-          ImageAsset(
-            webpAsset: app.appIconAssetWebp,
-            pngAsset: app.appIconAssetPng,
-            width: 128,
-            height: 128,
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: ImageAsset(
+              webpAsset: app.appIconAssetWebp,
+              width: 98,
+              height: 98,
+            ),
           ),
           const SizedBox(width: 16.0),
           Column(
@@ -57,7 +59,10 @@ class AppsParticipant extends StatelessWidget {
                 StoreButton(
                   storeType: StoreType.windowsStore,
                   onTap: () {
-                    // TODO: launch windows store or download exe file
+                    launchUrl(
+                      Uri.parse('${app.windowsStore}'),
+                      webOnlyWindowName: '_blank',
+                    );
                   },
                 ),
               if (app.webDemoPath != null)

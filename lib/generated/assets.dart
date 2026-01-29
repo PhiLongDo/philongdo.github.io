@@ -5,13 +5,10 @@ class Assets {
   static const String fontsCustomIcon = 'assets/fonts/custom-icon.ttf';
   static const String fontsNotoColorEmojiRegular =
       'assets/fonts/NotoColorEmoji-Regular.ttf';
-  static const String pngIcDeveloper128 = 'assets/png/ic_developer_128.png';
-  static const String pngIcFlipGame128 = 'assets/png/ic_flip_game_128.png';
-  static const String pngIcPokerPoint128 = 'assets/png/ic_poker_point_128.png';
-  static const String pngIcTapTap128 = 'assets/png/ic_tap_tap_128.png';
   static const String webpIcDeveloper128 = 'assets/webp/ic_developer_128.webp';
   static const String webpIcFlipGame128 = 'assets/webp/ic_flip_game_128.webp';
   static const String webpIcPokerPoint128 =
       'assets/webp/ic_poker_point_128.webp';
   static const String webpIcTapTap128 = 'assets/webp/ic_tap_tap_128.webp';
+  static const String webpIcCalendar128 = 'assets/webp/ic_calendar_128.webp';
 }

@@ -16,21 +16,25 @@ const webKeywords =
 
 final appList = [
   const AppModel(
+    name: 'Lịch Việt Nam',
+    appIconAssetWebp: Assets.webpIcCalendar128,
+    // playStoreId: 'com.dplong.fruits_and_ninja',
+    windowsStore:
+        'https://raw.githubusercontent.com/PhiLongDo/release_viet_name_calendar/refs/heads/main/viet_nam_calendar-windows-x64-setup.exe',
+  ),
+  const AppModel(
     name: 'Ninja and Fruits',
     appIconAssetWebp: Assets.webpIcTapTap128,
-    appIconAssetPng: Assets.pngIcTapTap128,
     playStoreId: 'com.dplong.fruits_and_ninja',
   ),
   const AppModel(
     name: 'Ghi điểm trò chơi',
     appIconAssetWebp: Assets.webpIcPokerPoint128,
-    appIconAssetPng: Assets.pngIcPokerPoint128,
     playStoreId: 'com.dplong.advance.pokerpoint',
   ),
   const AppModel(
     name: 'Trò chơi lật hình',
     appIconAssetWebp: Assets.webpIcFlipGame128,
-    appIconAssetPng: Assets.pngIcFlipGame128,
     playStoreId: 'com.dplong.flipgame.neo',
     webDemoPath: 'flip_game',
   ),

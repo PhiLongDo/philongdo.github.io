@@ -43,12 +43,7 @@ class _HomePageState extends State<HomePage> {
   Widget _buildHeader() {
     return const Column(
       children: [
-        ImageAsset(
-          webpAsset: Assets.webpIcDeveloper128,
-          pngAsset: Assets.pngIcDeveloper128,
-          width: 48,
-          height: 48,
-        ),
+        ImageAsset(webpAsset: Assets.webpIcDeveloper128, width: 48, height: 48),
         Text(
           developerName,
           style: TextStyle(
