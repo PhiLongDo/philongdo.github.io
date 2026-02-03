@@ -18,7 +18,7 @@ final appList = [
   const AppModel(
     name: 'Lịch Việt Nam',
     appIconAssetWebp: Assets.webpIcCalendar128,
-    // playStoreId: 'com.dplong.fruits_and_ninja',
+    playStoreId: 'com.dplong.viet_nam_calendar',
     windowsStore:
         'https://raw.githubusercontent.com/PhiLongDo/release_viet_name_calendar/refs/heads/main/viet_nam_calendar-windows-x64-setup.exe',
   ),
