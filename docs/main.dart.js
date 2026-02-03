@@ -81883,7 +81883,7 @@ I(a){var s=A.c([B.a7Q],t.p)
 B.b.P(s,new A.a9($.aCe,new A.a_h(this,a),A.a1($.aCe).h("a9<1,f>")))
 return A.d_(s,B.b_,B.L,B.O,0)},
 Av(a,b){var s=null,r=t.p,q=A.c([new A.AP(a.a,s)],r)
-if(a.c!=null)q.push(new A.tw(B.a3v,new A.a_e(a),s))
+q.push(new A.tw(B.a3v,new A.a_e(a),s))
 if(a.e!=null)q.push(new A.tw(B.a3x,new A.a_f(a),s))
 if(a.f!=null)q.push(new A.Bq(new A.a_g(b,a),B.a9F,s))
 return new A.c9(B.o0,A.eH(A.c([new A.c9(B.b9,new A.xG(a.b,98,98,s),s),B.a3b,A.d_(q,B.b_,B.L,B.O,4)],r),B.D,B.L,B.O,0),s)}}
@@ -81891,7 +81891,7 @@ A.a_h.prototype={
 $1(a){return this.a.Av(a,this.b)},
 $S:527}
 A.a_e.prototype={
-$0(){A.vl(A.d6("https://play.google.com/store/apps/details?id="+A.o(this.a.c),0,null),"_blank")},
+$0(){A.vl(A.d6("https://play.google.com/store/apps/details?id="+this.a.c,0,null),"_blank")},
 $S:0}
 A.a_f.prototype={
 $0(){A.vl(A.d6(A.o(this.a.e),0,null),"_blank")},
@@ -85410,8 +85410,8 @@ B.fA=new A.hS(3,"hidden")
 B.jI=new A.hS(4,"paused")
 B.Gq=new A.jL("Ghi \u0111i\u1ec3m tr\xf2 ch\u01a1i","assets/webp/ic_poker_point_128.webp","com.dplong.advance.pokerpoint",null,null)
 B.Gr=new A.jL("Ninja and Fruits","assets/webp/ic_tap_tap_128.webp","com.dplong.fruits_and_ninja",null,null)
-B.Gs=new A.jL("Tr\xf2 ch\u01a1i l\u1eadt h\xecnh","assets/webp/ic_flip_game_128.webp","com.dplong.flipgame.neo",null,"flip_game")
-B.Gt=new A.jL("L\u1ecbch Vi\u1ec7t Nam","assets/webp/ic_calendar_128.webp",null,"https://raw.githubusercontent.com/PhiLongDo/release_viet_name_calendar/refs/heads/main/viet_nam_calendar-windows-x64-setup.exe",null)
+B.Gs=new A.jL("L\u1ecbch Vi\u1ec7t Nam","assets/webp/ic_calendar_128.webp","com.dplong.viet_nam_calendar","https://raw.githubusercontent.com/PhiLongDo/release_viet_name_calendar/refs/heads/main/viet_nam_calendar-windows-x64-setup.exe",null)
+B.Gt=new A.jL("Tr\xf2 ch\u01a1i l\u1eadt h\xecnh","assets/webp/ic_flip_game_128.webp","com.dplong.flipgame.neo",null,"flip_game")
 B.jJ=new A.vM(0,"polite")
 B.jK=new A.vM(1,"assertive")
 B.hT=s([],t.s)
@@ -89670,7 +89670,7 @@ $.aKS=A.c([35,30,20,25,30,35,30,25,25],t.n)
 $.hV=function(){var s=t.n
 return A.c([A.c([0.41233895,0.35762064,0.18051042],s),A.c([0.2126,0.7152,0.0722],s),A.c([0.01932141,0.11916382,0.95034478],s)],t.zg)}()
 $.qG=A.c([95.047,100,108.883],t.n)
-$.aCe=A.c([B.Gt,B.Gr,B.Gq,B.Gs],A.ao("w<jL>"))
+$.aCe=A.c([B.Gs,B.Gr,B.Gq,B.Gt],A.ao("w<jL>"))
 $.aCH=A.c([B.HE],A.ao("w<rO>"))
 $.aIY=A.r(t.S,A.ao("aSh"))})();(function lazyInitializers(){var s=hunkHelpers.lazyFinal,r=hunkHelpers.lazy
 s($,"aUJ","vs",()=>A.B(A.B(A.ae(),"ClipOp"),"Intersect"))
