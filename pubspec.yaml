@@ -1,7 +1,7 @@
 name: phi_long_do
 publish_to: 'none'
 
-version: 1.0.3+9
+version: 1.0.3+10
 
 environment:
   sdk: ^3.8.1
